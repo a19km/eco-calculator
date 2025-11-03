@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة البصمة البيئية - اكتشف تأثيرك على الكوكب</title>
+    <meta name="description" content="حاسبة البصمة البيئية - اكتشف تأثير عاداتك الاستهلاكية على البيئة واعرف كيف يمكنك تقليل بصمتك الكربونية">
+    <meta name="keywords" content="بصمة بيئية, بيئة, استدامة, كربون, تلوث, طبيعة, حاسبة بيئية">
+    <meta name="author" content="حاسبة البصمة البيئية">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header id="welcome-screen">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h1>حاسبة البصمة البيئية</h1>
+            <p class="tagline">اكتشف تأثير عاداتك الاستهلاكية على البيئة واعرف كيف يمكنك تقليل بصمتك الكربونية للمساهمة في حماية كوكبنا</p>
+            <button class="btn-start" id="start-btn">
+                ابدأ رحلتك الخضراء <i class="fas fa-arrow-left"></i>
+            </button>
+        </header>
+        
+        <div class="calculator-container" id="calculator">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            
+            <div class="question-container" id="question-container">
+                <!-- سيتم تحديث المحتوى ديناميكياً -->
+            </div>
+        </div>
+        
+        <div class="results-container" id="results">
+            <div class="results-header">
+                <div class="planet-icon">
+                    <i class="fas fa-globe-asia"></i>
+                </div>
+                <h2 class="results-title">نتائج بصمتك البيئية</h2>
+                <p>إليك تحليل مفصل لتأثير عاداتك الاستهلاكية على البيئة</p>
+            </div>
+            
+            <div class="earth-result">
+                <div class="earth-label">أنت تستهلك موارد تعادل</div>
+                <div class="earth-count" id="earth-count">2</div>
+                <div class="earth-description" id="earth-description">أرضين للحفاظ على نمط حياتك الحالي</div>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon water-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="metric-value" id="water-value">4,200 لتر</div>
+                    <div class="metric-label">استهلاك المياه السنوي</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon waste-icon">
+                        <i class="fas fa-trash"></i>
+                    </div>
+                    <div class="metric-value" id="waste-value">12.5 كجم</div>
+                    <div class="metric-label">النفايات البلاستيكية والصلبة</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon fiber-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="metric-value" id="microfiber-value">0.85 مليون</div>
+                    <div class="metric-label">ألياف الميكروبلاستيك المنبعثة</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon carbon-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="metric-value" id="carbon-value">45 كجم</div>
+                    <div class="metric-label">انبعاثات ثاني أكسيد الكربون</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon plastic-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="metric-value" id="plastic-risk">متوسط</div>
+                    <div class="metric-label">مؤشر خطر الميكروبلاستيك</div>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <p>بصمتك البيئية <strong>أقل من المتوسط العالمي</strong> بنسبة 15%، وهذا جيد! ولكن هناك دائمًا مجال للتحسين.</p>
+            </div>
+            
+            <button class="details-btn" id="details-btn">
+                <i class="fas fa-chart-bar"></i> لماذا هذه النتيجة؟
+            </button>
+            
+            <div class="tips-section">
+                <h3 class="tips-title">نصائح لتقليل بصمتك البيئية</h3>
+                
+                <div class="tips-grid" id="tips-grid">
+                    <!-- سيتم ملؤها ديناميكياً -->
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button class="btn btn-restart" id="restart-btn">
+                    <i class="fas fa-redo"></i> إعادة الاختبار
+                </button>
+                <button class="btn btn-share" id="share-btn">
+                    <i class="fas fa-share-alt"></i> مشاركة النتائج
+                </button>
+            </div>
+            
+            <div class="disclaimer">
+                <strong>ملاحظة:</strong> هذه النتائج تقديرات مبسّطة وليست جردًا دقيقًا لانبعاثات دورة حياة المنتج. الغرض منها التوعية وليست القياس الدقيق.
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="details-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">تفاصيل النتائج والإحصاءات</h3>
+                    <button class="close-btn" id="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="stats-grid" id="stats-grid">
+                        <!-- سيتم ملؤها ديناميكياً -->
+                    </div>
+                    
+                    <div class="recommendations" id="recommendations">
+                        <!-- سيتم ملؤها ديناميكياً -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 حاسبة البصمة البيئية. جميع الحقوق محفوظة.</p>
+            <p>تم التطوير بهدف التوعية البيئية وليس للاستخدام التجاري.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
